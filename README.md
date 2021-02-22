@@ -1,7 +1,7 @@
 # field-solutions
 
-Folders in this repository contain solutions developed by customers, partners, and Gremlin field personnel and provided free of charge. They are offered as open source under the Apache 2.0 license with no implied support. Feel free to use these at your own discretion.  
+Folders in this repository contain solutions developed by customers, partners, and Gremlin field personnel and provided free of charge. They are offered unsupported under the Apache 2.0 license. Feel free to use these at your own discretion.  
 
-## Folders:
+# Folders:
 
->**gremlin-ocp4-mc**: Openshift Container Platform (OCP) 4 Machine Config Operator for installing the SELinux Policy onto nodes.
+   **gremlin-ocp4-mc**: Machine Config Operator for installing the SELinux Policy on Openshift Container Platform (OCP) 4.
