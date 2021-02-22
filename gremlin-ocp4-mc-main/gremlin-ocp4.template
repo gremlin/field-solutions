@@ -1,0 +1,35 @@
+kind: MachineConfig
+apiVersion: machineconfiguration.openshift.io/v1
+metadata:
+  name: 95-worker-gremlin-semodule  # RECOMMEND CHANGE NAME TO MATCH NODE ROLE
+  creationTimestamp: 
+  labels:
+    machineconfiguration.openshift.io/role: worker # CHANGE TO MATCH NODE ROLE
+spec:
+  osImageURL: ''
+  config:
+    ignition:
+      version: 2.2.0
+    storage:
+      files:
+      - filesystem: root
+        path: "/etc/selinux/gremlin-ocp4.pp"
+        contents:
+          source: data:text/plain;charset=utf-8;base64,#CHANGE EVERYTHING FROM THE # ON. LEAVE THE COMMA
+          verification: {}
+        mode: 0755
+    systemd:
+      units:
+        - contents: |
+            [Unit]
+            Requires=systemd-udevd.target
+            After=systemd-udevd.target
+            Before=NetworkManager.service
+            DefaultDependencies=no
+            [Service]
+            Type=oneshot
+            ExecStart=/usr/sbin/semodule -i /etc/selinux/gremlin-ocp4.pp
+            [Install]
+            WantedBy=multi-user.target
+          name: one-shot-gremlin-ocp4.service
+          enabled: true
