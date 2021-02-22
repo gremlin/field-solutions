@@ -4,4 +4,4 @@ Folders in this repository contain solutions developed by customers, partners, a
 
 ## Folders:
 
-   **gremlin-ocp4-mc**: Machine Config Operator for installing the Gremlin SELinux Policy on Openshift Container Platform (OCP) 4.
+   - **gremlin-ocp4-mc**: Machine Config Operator for installing the Gremlin SELinux Policy on Openshift Container Platform (OCP) 4.
