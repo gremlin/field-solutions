@@ -3,8 +3,7 @@ OpenShift 4 Machine Config for Gremlin Chaos Engineering Platform
 
 # What is this?
 Gremlin Chaos Engineering Platform (https://www.gremlin.com/) is a way to help
-test your Kubernetes cluster to determine its resiliance by doing nasty things
-to it.
+test your Kubernetes cluster to determine its resilience through controlled failures and experiments.
 
 Red Hat® OpenShift® is a hybrid cloud, enterprise Kubernetes
 application platform.  The current release is OpenShift Container Platform 4.x (OCP 4.x)
