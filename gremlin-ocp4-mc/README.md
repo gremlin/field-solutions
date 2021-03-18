@@ -41,9 +41,14 @@ to match the node types you wish to update.
 This also includes a completed worker Machine Config for nodes labelled as `worker`  It is current as of 2020/12/07
 so if there have been any updates to the gremlin-openshift4.cil after that date, it will not be reflected.
 
-To apply use:
+To apply to Openshift 4.1 - 4.5 cluster:
 
 `oc create -f 95-worker-gremlin-semodule.yaml`
+
+To apply to Openshift 4.6+ cluster:
+
+`oc create -f 96-worker-gremlin-semodule.yaml`
+
 
 # Support
 This software is available under the [Apache 2.0 License](LICENSE). 
