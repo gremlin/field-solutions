@@ -18,17 +18,17 @@ This project is to create a usuable Machine Config based on the required setting
 
 # How it does it
 This repo contains a templated machine config.  This template is modified in the designated location
-by taking the base64 encoded SELinux modules required found at 
+by taking the base64 encoded SELinux modules that can be downloaded at:
 
-https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshift4.cil
+https://github.com/gremlin/selinux-policies/releases/download/v0.0.2/selinux-policies-v0.0.2.tar.gz
 
 This is done as a straight cut and paste of the results of the following commands:
 
 RHEL: 
-`curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -w0 > gremlin-openshift4.cil.b64`
+`base64 selinux-policies-v0.0.2/gremlin-openshift4.cil -w0 > gremlin-openshift4.cil.b64`
 
 MacOS: 
-`curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -o gremlin-openshift4.cil.b64`
+`base64 selinux-policies-v0.0.2/gremlin-openshift4.cil -o gremlin-openshift4.cil.b64`
 
 (You may need to use `set maxmempattern=2000000` or something in your .vimrc file)
 You can also try using `:r gremlin-openshift4.cil.b64` at the correct spot in the file.  Make sure it is on the
