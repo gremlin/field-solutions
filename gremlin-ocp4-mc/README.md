@@ -28,7 +28,7 @@ RHEL:
 `base64 selinux-policies-v0.0.2/gremlin-openshift4.cil -w0 > gremlin-openshift4.cil.b64`
 
 MacOS: 
-`base64 selinux-policies-v0.0.2/gremlin-openshift4.cil -o gremlin-openshift4.cil.b64`
+`base64 -i selinux-policies-v0.0.2/gremlin-openshift4.cil -o gremlin-openshift4.cil.b64`
 
 (You may need to use `set maxmempattern=2000000` or something in your .vimrc file)
 You can also try using `:r gremlin-openshift4.cil.b64` at the correct spot in the file.  Make sure it is on the
