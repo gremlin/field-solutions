@@ -37,7 +37,7 @@ correct line and there is no space!
 You will need (should) change the name of the Machine Config to match the Node label as well as updating the node label
 to match the node types you wish to update.
 
-This also includes a completed worker Machine Config for nodes labelled as `worker`  It is current as of 2020/12/07
+This also includes a completed worker Machine Config for nodes labelled as `worker`  It is current as of 2023/10/17
 so if there have been any updates to the gremlin-openshift4.cil after that date, it will not be reflected.
 
 To apply to Openshift 4.1 - 4.5 cluster:
@@ -47,6 +47,10 @@ To apply to Openshift 4.1 - 4.5 cluster:
 To apply to Openshift 4.6+ cluster:
 
 `oc create -f 96-worker-gremlin-semodule.yaml`
+
+To apply to Openshift 4.13+ cluster:
+
+`oc create -f 97-worker-gremlin-semodule.yaml`
 
 
 # Support
